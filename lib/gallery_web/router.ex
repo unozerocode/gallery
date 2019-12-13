@@ -1,10 +1,12 @@
 defmodule GalleryWeb.Router do
   use GalleryWeb, :router
+  use Phoenix.LiveView
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
+    plug Phoenix.LiveView.Flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -17,6 +19,7 @@ defmodule GalleryWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/gallery", GalleryLive
   end
 
   # Other scopes may use custom stacks.

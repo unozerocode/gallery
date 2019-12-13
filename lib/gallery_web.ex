@@ -24,6 +24,7 @@ defmodule GalleryWeb do
       import Plug.Conn
       import GalleryWeb.Gettext
       alias GalleryWeb.Router.Helpers, as: Routes
+      import Phoenix.LiveView.Controller
     end
   end
 
@@ -42,6 +43,8 @@ defmodule GalleryWeb do
       import GalleryWeb.ErrorHelpers
       import GalleryWeb.Gettext
       alias GalleryWeb.Router.Helpers, as: Routes
+      import Phoenix.LiveView,
+        only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2]
     end
   end
 
@@ -50,6 +53,7 @@ defmodule GalleryWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 

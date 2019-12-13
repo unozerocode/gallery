@@ -12,7 +12,10 @@ config :gallery, GalleryWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "U2VfwJfet0+oLaYCmemTCLWks3HHPBZH4gfGlaOlJrgHk9D4YCAmKW1YUXeAvH4v",
   render_errors: [view: GalleryWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Gallery.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Gallery.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [
+    signing_salt: "odopU4nbDK2wovnrHPRcObo/IpWm6JSI"
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
