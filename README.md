@@ -2,6 +2,8 @@
 
 From [tutorial](https://www.poeticoding.com/how-to-setup-phoenix-liveview/)
 
+[![GitHubCI](https://github.com/unozerocode/gallery/workflows/Elixir%20CI/badge.svg)](https://github.com/unozerocode/gallery/actions?query=workflow%3A%22Elixir+CI%22)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
