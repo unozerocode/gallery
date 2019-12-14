@@ -1,6 +1,6 @@
 defmodule GalleryWeb.Router do
   use GalleryWeb, :router
-  use Phoenix.LiveView
+  use Phoenix.LiveView 
 
   pipeline :browser do
     plug :accepts, ["html"]
