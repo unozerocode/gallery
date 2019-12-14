@@ -19,7 +19,7 @@ defmodule GalleryWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    live "/counter", CounterLive
+    live "/gallery", GalleryLive
   end
 
   # Other scopes may use custom stacks.
